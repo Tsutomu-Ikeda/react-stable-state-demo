@@ -629,10 +629,12 @@ react-refresh@^0.11.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.11.0.tgz#77198b944733f0f1f1a90e791de4541f9f074046"
   integrity sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==
 
-react-stable-state@^0.0.10:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/react-stable-state/-/react-stable-state-0.0.10.tgz#bd8192a147c320794475e221dda95de1b85aedd2"
-  integrity sha512-fb1tXw1Sw76kO+UqXavSCcgWS/j8C3zuqYWMCn/F3r74J9kv8A/G2kx5uKGySJrTnku/HB5P3zK4v0zMx9m3/A==
+react-stable-state@^0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/react-stable-state/-/react-stable-state-0.0.11.tgz#6f4ca0d187443eddd35390b2bdfd29e91a0cbd1a"
+  integrity sha512-2B7kHqO4AnLGRjPuJtAFqmI/MyWDZWWk1X0bGWE+WCi4YkTEa6aSM8Ts25SEKJ20dxnsgDiD1K4QY5w3x3C2NQ==
+  dependencies:
+    tslib "^2.3.1"
 
 react@^17.0.2:
   version "17.0.2"

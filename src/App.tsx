@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useStableStateExtra } from "react-stable-state";
 import "./App.css";
 
@@ -13,6 +13,8 @@ const App = () => {
   } = useStableStateExtra<string>({
     initialState: localStorage.getItem("key") || "",
   });
+
+  const [value2, setValue2] = useState("");
 
   useEffect(() => {
     console.log("stable value has changed!");
@@ -60,7 +62,7 @@ const App = () => {
           {isEditing ? "editing..." : "synced"}
         </div>
       </div>
-      delay:
+      delay:{" "}
       <label htmlFor="delay">
         {delay / 1000} second{delay != 1000 && "s"}
       </label>
@@ -77,6 +79,26 @@ const App = () => {
           setDelay(e.target.valueAsNumber);
         }}
       ></input>
+      <div>
+        This page is a demonstration of the{" "}
+        <a
+          href="https://www.npmjs.com/package/react-stable-state"
+          target="_blank"
+          rel="noopener"
+        >
+          react-stable-state
+        </a>{" "}
+        module. <br></br>
+        The source code for this page has been uploaded to{" "}
+        <a
+          href="https://github.com/Tsutomu-Ikeda/react-stable-state-demo"
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub Repository
+        </a>
+        .
+      </div>
     </div>
   );
 };

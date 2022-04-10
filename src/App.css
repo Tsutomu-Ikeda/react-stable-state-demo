@@ -59,3 +59,11 @@ textarea {
   width: 200px;
   height: 200px;
 }
+
+a, a:visited {
+  color: rgb(0, 153, 236);
+}
+
+div {
+  line-height: 1.5rem;
+}
