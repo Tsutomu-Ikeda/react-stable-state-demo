@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useStableStateExtra } from "react-stable-state";
 import "./App.css";
 
@@ -12,9 +12,17 @@ const App = () => {
     setDelay,
   } = useStableStateExtra<string>({
     initialState: localStorage.getItem("key") || "",
+    onBeforeUnload: ({ state, isEditing }) => {
+      try {
+        if (isEditing) {
+          localStorage.setItem("key", state);
+        }
+        return undefined;
+      } catch {
+        return true;
+      }
+    },
   });
-
-  const [value2, setValue2] = useState("");
 
   useEffect(() => {
     console.log("stable value has changed!");
